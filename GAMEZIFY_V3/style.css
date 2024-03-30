@@ -1,0 +1,97 @@
+body {
+  background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
+}
+
+.container {
+  text-align: center;
+}
+
+.Game_Button {
+  text-align: center;
+  border: solid 5px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 10px;
+  border-color: black;
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(7, 0, 61, 1) 17%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  transition-duration: 0.5s;
+}
+
+.Game_Button img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.Game_Button:hover {
+  opacity: 0.2;
+  transform: scale(1.1);
+}
+
+.navigationBar {
+  background-color: #0d1d31;
+  border-style: solid;
+  padding: 10px;
+  margin-bottom: 45px;
+  border-radius: 20px;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-name: floating;
+}
+
+.navigationBar a {
+  margin: 10px;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: aliceblue;
+  padding: 10px;
+  transition-duration: 0.5s;
+  font-size: larger;
+}
+
+.navigationBar a:hover {
+  opacity: 0.5;
+  background-color: gray;
+  color: rgb(15, 29, 74);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+header {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 100px;
+  color: aliceblue;
+}
