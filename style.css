@@ -95,3 +95,8 @@ header {
   font-size: 100px;
   color: aliceblue;
 }
+
+.active {
+  background-color: rgb(52, 52, 52);
+  font-weight: 700;
+}
