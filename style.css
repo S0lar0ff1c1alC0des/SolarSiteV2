@@ -34,14 +34,6 @@ body {
   margin: 0 auto;
 }
 
-.big_image img {
-  display: block;
-  width: 330px;
-  height: 330px;
-  border-radius: 10px;
-  margin: 0 auto;
-  display: inline-block;
-}
 
 .Game_Button:hover {
   opacity: 0.2;
@@ -111,6 +103,12 @@ header {
 }
 
 .SearchBar {
+  width: 50%;
+  margin: 0 auto;
   text-align: center;
-  ins;
+  display: block;
+  padding: 10px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  background: radial-gradient(#ffffff 0%, #919191 100%);
 }

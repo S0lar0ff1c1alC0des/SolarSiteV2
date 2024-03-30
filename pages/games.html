@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div class="navigationBar">
-    <a href="/index.html">Home</a>
-    <a class="active">Games</a>
-  </div>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,9 +9,19 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <div class="navigationBar">
+      <a href="/index.html">Home</a>
+      <a class="active" href="/games.html">Games</a>
+    </div>
     <header>Games</header>
 
-    <input class="SearchBar" type="text" id="searchInput" placeholder="Search games..." />
+    <input
+      class="SearchBar"
+      type="text"
+      id="searchInput"
+      placeholder="Search games..."
+    />
+
     <div class="container" id="gameContainer">
       <a href="/Games/Duck_Life">
         <section class="Game_Button">
@@ -42,7 +48,7 @@
       </a>
       <a href="/Games/doodle-jump">
         <section class="Game_Button">
-          <a class="big_image">
+          <a class="Game_Button">
             <img src="/images/doodle-jump_Logo.png" alt="Doodle Jump" />
           </a>
         </section>
