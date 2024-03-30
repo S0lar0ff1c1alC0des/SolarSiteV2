@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <div class="navigationBar">
-        <a href="/index.html">Home</a>
-        <a class="active">Games</a>
-
-    </div>
+  <div class="navigationBar">
+    <a href="/index.html">Home</a>
+    <a class="active">Games</a>
+  </div>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,10 +14,12 @@
   </head>
   <body>
     <header>Games</header>
-    <div class="container">
+
+    <input class="SearchBar" type="text" id="searchInput" placeholder="Search games..." />
+    <div class="container" id="gameContainer">
       <a href="/Games/Duck_Life">
         <section class="Game_Button">
-          <img src="/images/Duck_LifeLogo.jpeg" alt="game_Image" />
+          <img src="/images/Duck_LifeLogo.jpeg" alt="Duck Life" />
         </section>
       </a>
       <a href="/Games/2048">
@@ -29,26 +29,26 @@
       </a>
       <a href="/Games/basketball-stars">
         <section class="Game_Button">
-          <img src="/images/basketball-stars_Logo.jpeg" alt="game_Image" />
+          <img
+            src="/images/basketball-stars_Logo.jpeg"
+            alt="Basketball Stars"
+          />
         </section>
       </a>
       <a href="/Games/muffin-knight">
         <section class="Game_Button">
-          <img src="/images/muffin-knight_Logo.png" alt="game_Image" />
+          <img src="/images/muffin-knight_Logo.png" alt="Muffin Knight" />
         </section>
       </a>
-    </div>
-
       <a href="Games/doodle-jump">
         <section class="Game_Button">
           <a class="big_image">
-            <img src="images/doodle-jump_Logo.png" alt="game_Image" />
+            <img src="/images/doodle-jump_Logo.png" alt="Doodle Jump" />
           </a>
         </section>
       </a>
     </div>
-    
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

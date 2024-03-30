@@ -36,8 +36,8 @@ body {
 
 .big_image img {
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 330px;
+  height: 330px;
   border-radius: 10px;
   margin: 0 auto;
   display: inline-block;
@@ -108,4 +108,9 @@ header {
 .active {
   background-color: rgb(52, 52, 52);
   font-weight: 700;
+}
+
+.SearchBar {
+  text-align: center;
+  ins;
 }
