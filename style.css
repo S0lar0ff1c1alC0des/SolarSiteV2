@@ -110,7 +110,14 @@ header {
   margin-bottom: 100px;
   border-radius: 10px;
   background: radial-gradient(#ffffff 0%, #919191 100%);
+  transition-duration: 0.4s;
 }
+
+.SearchBar:hover {
+  opacity: 0.5;
+  transform: scale(1.1); 
+}
+
 
 .splash-screen {
   position: fixed;
