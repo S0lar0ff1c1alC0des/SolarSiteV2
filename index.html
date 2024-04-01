@@ -16,7 +16,6 @@
           localStorage.setItem('redirected', true);
         }
 
-        // Clear the 'redirected' key on page reload or unload
         window.addEventListener('beforeunload', () => {
           localStorage.removeItem('redirected');
         });
