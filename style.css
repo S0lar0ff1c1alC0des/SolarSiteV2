@@ -88,7 +88,7 @@ header {
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 25vh;
+  min-height: 100vh;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-style: normal;
@@ -138,13 +138,12 @@ header {
 
 @keyframes slidedown {
   0% {
-    transform: translateY(0);
+    transform: translateX(0%);
     opacity: 1;
   }
 
   100% {
-    transform: translateY(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
 }
-
