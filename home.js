@@ -1,19 +1,18 @@
 window.addEventListener("load", function (
 ) {
-    // Redirect user if not redirected before
+
 if (!localStorage.getItem('redirected')) {
         window.location.href = '/pages/educational_Portal.html';
         localStorage.setItem('redirected', true);
     }
 
-    // Retrieve elements
+
 const searchInput = document.getElementById("search-input");
     const gameContainer = document.getElementById("gameContainer");
     const gameButtons = document.querySelectorAll(".Game_Button");
     const splashScreen = document.getElementById("splashScreen");
     const mainContent = document.getElementById("mainContent");
 
-    // Handle search input event
 searchInput.addEventListener("input", function (
 ) {
         const searchTerm = searchInput.value.trim().toLowerCase();
@@ -28,7 +27,7 @@ searchInput.addEventListener("input", function (
         });
     });
 
-    // Handle splash screen animation
+
 setTimeout(() => {
         splashScreen.style.animation = "slidedown 0.9s ease-in-out forwards";
 
