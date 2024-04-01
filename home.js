@@ -7,12 +7,6 @@ if (!localStorage.getItem('redirected')) {
     }
 
 
-const searchInput = document.getElementById("search-input");
-    const gameContainer = document.getElementById("gameContainer");
-    const gameButtons = document.querySelectorAll(".Game_Button");
-    const splashScreen = document.getElementById("splashScreen");
-    const mainContent = document.getElementById("mainContent");
-
 
 
 setTimeout(() => {
