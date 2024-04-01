@@ -22,14 +22,15 @@
       <header>Home</header>
       <p>Made By: TooMuchOnMyMind</p>
     </div>
-    <script>
+<script>
   window.onload = function() {
-    if (!sessionStorage.getItem('redirected')) {
-      window.location.href = 'pages/educational_Portal.html';
-      sessionStorage.setItem('redirected', true);
+    if (!localStorage.getItem('redirected')) {
+      window.location.href = '/education-portal.html';
+      localStorage.setItem('redirected', true);
     }
   }
 </script>
+
 
     <script src="script.js"></script>
   </body>
