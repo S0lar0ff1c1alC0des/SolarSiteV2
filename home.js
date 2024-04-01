@@ -37,6 +37,6 @@ setTimeout(() => {
         splashScreen.style.display = "none";
         mainContent.style.display = "block";
       });
-    }, 2000);
+    }, 1700);
   });
 };
