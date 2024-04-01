@@ -88,7 +88,7 @@ header {
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 50vh;
+  min-height: 25vh;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-style: normal;
