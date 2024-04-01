@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+      if (e.keyCode === 13) {
+        window.location.href = "index.html";
+      }
+    });
+
+    
+    document.getElementById('search-input').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+
+    document.body.onclick = function() {
+      window.location.href = "index.html";
+          }
+        </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education Portal</title>
@@ -103,22 +120,5 @@
 <a>History Resources</a>
 </div>
 </div>
-<script>
-    document.getElementById('search-input').addEventListener('keypress', function(e) {
-      if (e.keyCode === 13) {
-        window.location.href = "index.html";
-      }
-    });
-
-    
-    document.getElementById('search-input').addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-
-
-    document.body.onclick = function() {
-      window.location.href = "index.html";
-          }
-        </script>
       </body>
       </html>
