@@ -12,3 +12,4 @@ Gamezify V3! A brand new site with better games!
 - https://gamezify-v3-cbta20tgv-toomuchonmyminds-projects.vercel.app/
 - https://gamezify-v3-git-main-toomuchonmyminds-projects.vercel.app/
 - https://gamezify-v3.vercel.app/
+- https://gamezify.netlify.app/
