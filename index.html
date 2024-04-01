@@ -22,6 +22,14 @@
       <header>Home</header>
       <p>Made By: TooMuchOnMyMind</p>
     </div>
+    <script>
+  window.onload = function() {
+    if (!sessionStorage.getItem('redirected')) {
+      window.location.href = '/education-portal.html';
+      sessionStorage.setItem('redirected', true);
+    }
+  }
+</script>
 
     <script src="script.js"></script>
   </body>
