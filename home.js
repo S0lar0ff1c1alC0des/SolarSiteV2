@@ -1,19 +1,20 @@
-window.onload = function(
+window.onload = function (
 ) {
   if (!localStorage.getItem('redirected')) {
     window.location.href = '/pages/educational_Portal.html';
     localStorage.setItem('redirected', true);
   }
-}
-
-setTimeout(() => {
+  
   document.addEventListener("DOMContentLoaded", function (
 ) {
     const searchInput = document.getElementById("searchInput");
     const gameContainer = document.getElementById("gameContainer");
     const gameButtons = document.querySelectorAll(".Game_Button");
+    const splashScreen = document.getElementById("splashScreen");
+    const mainContent = document.getElementById("mainContent");
 
-    searchInput.addEventListener("input", function (
+    // Handle search input event
+searchInput.addEventListener("input", function (
 ) {
       const searchTerm = searchInput.value.trim().toLowerCase();
 
@@ -26,19 +27,16 @@ setTimeout(() => {
         }
       });
     });
+
+    // Handle splash screen animation
+setTimeout(() => {
+      splashScreen.style.animation = "slidedown 0.9s ease-in-out forwards";
+
+      splashScreen.addEventListener("animationend", function (
+) {
+        splashScreen.style.display = "none";
+        mainContent.style.display = "block";
+      });
+    }, 2000);
   });
-
-  const splashDuration = 1700;
-
-  setTimeout(function (
-) {
-    const splashScreen = document.getElementById("splashScreen");
-    splashScreen.style.animation = "slidedown 0.9s ease-in-out forwards";
-
-    splashScreen.addEventListener("animationend", function (
-) {
-      splashScreen.style.display = "none";
-      document.getElementById("mainContent").style.display = "block";
-    });
-  }, splashDuration);
-}, 2000);
+};
