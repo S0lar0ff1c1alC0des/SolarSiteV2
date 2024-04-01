@@ -1,39 +1,41 @@
-window.onload = function (
+window.addEventListener("load", function (
 ) {
-  if (!localStorage.getItem('redirected')) {
-    window.location.href = '/pages/educational_Portal.html';
-    localStorage.setItem('redirected', true);
-  }
+    // Redirect user if not redirected before
+if (!localStorage.getItem('redirected')) {
+        window.location.href = '/pages/educational_Portal.html';
+        localStorage.setItem('redirected', true);
+    }
 
-  const searchInput = document.getElementById("searchInput");
-  const gameContainer = document.getElementById("gameContainer");
-  const gameButtons = document.querySelectorAll(".Game_Button");
-  const splashScreen = document.getElementById("splashScreen");
-  const mainContent = document.getElementById("mainContent");
+    // Retrieve elements
+const searchInput = document.getElementById("search-input");
+    const gameContainer = document.getElementById("gameContainer");
+    const gameButtons = document.querySelectorAll(".Game_Button");
+    const splashScreen = document.getElementById("splashScreen");
+    const mainContent = document.getElementById("mainContent");
 
-  // Handle search input event
+    // Handle search input event
 searchInput.addEventListener("input", function (
 ) {
-    const searchTerm = searchInput.value.trim().toLowerCase();
+        const searchTerm = searchInput.value.trim().toLowerCase();
 
-    gameButtons.forEach((button) => {
-      const gameName = button.querySelector("img").alt.toLowerCase();
-      if (gameName.includes(searchTerm)) {
-        button.style.display = "inline-block";
-      } else {
-        button.style.display = "none";
-      }
+        gameButtons.forEach((button) => {
+            const gameName = button.querySelector("img").alt.toLowerCase();
+            if (gameName.includes(searchTerm)) {
+                button.style.display = "inline-block";
+            } else {
+                button.style.display = "none";
+            }
+        });
     });
-  });
 
-  // Handle splash screen animation
+    // Handle splash screen animation
 setTimeout(() => {
-    splashScreen.style.animation = "slidedown 0.9s ease-in-out forwards";
+        splashScreen.style.animation = "slidedown 0.9s ease-in-out forwards";
 
-    splashScreen.addEventListener("animationend", function (
+        splashScreen.addEventListener("animationend", function (
 ) {
-      splashScreen.style.display = "none";
-      mainContent.style.display = "block";
-    });
-  }, 1700);
-};
+            splashScreen.style.display = "none";
+            mainContent.style.display = "block";
+        });
+    }, 1700);
+});
