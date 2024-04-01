@@ -1,3 +1,15 @@
+window.onload = function() {
+  if (!localStorage.getItem('redirected')) {
+    window.location.href = 'pages/educational_Portal.html';
+    localStorage.setItem('redirected', true);
+  }
+
+  window.addEventListener(
+      'beforeunload', () = > { localStorage.removeItem('redirected'); });
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
   const gameContainer = document.getElementById("gameContainer");
