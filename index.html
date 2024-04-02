@@ -14,12 +14,15 @@
 <a href="/pages/games.html">Games</a>
 </div>
 <script>
-      if (!localStorage.getItem('visited')) {
+    if (!localStorage.getItem('visited')) {
         window.location.href = 'pages/educational_Portal.html';
-      }
+    } else {
+        window.location.href = '/index.html';
+    }
 
-      localStorage.setItem('visited', true);
-    </script>
+    localStorage.setItem('visited', true);
+</script>
+
 <div class="splash-screen" id="splashScreen">
 <p>Welcome To GAMEZIFY</p>
 </div>
