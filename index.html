@@ -14,15 +14,16 @@
 <a href="/pages/games.html">Games</a>
 </div>
 <script>
-    window.addEventListener('beforeunload', function (event) {
-        localStorage.setItem('visited', false);
-    });
+window.addEventListener('beforeunload', function (event) {
+    localStorage.setItem('visited', false);
+});
 
-    if (!localStorage.getItem('visited')) {
-        window.location.href = 'pages/educational_Portal.html';
-    } 
+if (!localStorage.getItem('visited')) {
+    window.location.href = 'pages/educational_Portal.html';
+}
 
-    localStorage.setItem('visited', true);
+localStorage.setItem('visited', true);
+
 </script>
 
 
