@@ -9,10 +9,6 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-<div class="navigationBar">
-<a class="active" href="/index.html">Home</a>
-<a href="/pages/games.html">Games</a>
-</div>
 <script>
 window.addEventListener('beforeunload', function (event) {
     localStorage.setItem('visited', false);
@@ -23,10 +19,11 @@ if (!localStorage.getItem('visited')) {
 }
 
 localStorage.setItem('visited', true);
-
 </script>
-
-
+<div class="navigationBar">
+<a class="active" href="/index.html">Home</a>
+<a href="/pages/games.html">Games</a>
+</div>
 <div class="splash-screen" id="splashScreen">
 <p>Welcome To GAMEZIFY</p>
 </div>
