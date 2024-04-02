@@ -10,10 +10,6 @@
 </head>
 <body>
 <script>
-        window.addEventListener('beforeunload', function (event) {
-            localStorage.setItem('visited', false);
-        });
-
         if (!localStorage.getItem('visited')) {
             window.location.href = '/pages/educational_Portal.html';
         }
@@ -31,5 +27,10 @@
 <header>Home</header>
 <p>Made By: TooMuchOnMyMind</p>
 </div>
+<script>
+        window.addEventListener('beforeunload', function (event) {
+            localStorage.removeItem('visited');
+        });
+    </script>
 </body>
 </html>
