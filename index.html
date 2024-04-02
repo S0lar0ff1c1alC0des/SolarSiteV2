@@ -14,12 +14,17 @@
 <a href="/pages/games.html">Games</a>
 </div>
 <script>
+    window.addEventListener('beforeunload', function (event) {
+        localStorage.setItem('visited', false);
+    });
+
     if (!localStorage.getItem('visited')) {
-        window.location.href = '/pages/educational_Portal.html';
-    }
+        window.location.href = 'pages/educational_Portal.html';
+    } 
 
     localStorage.setItem('visited', true);
 </script>
+
 
 <div class="splash-screen" id="splashScreen">
 <p>Welcome To GAMEZIFY</p>
