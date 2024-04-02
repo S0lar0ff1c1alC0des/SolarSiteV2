@@ -9,17 +9,20 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
+<noscript>
+<meta http-equiv="refresh" content="0;URL='pages/educational_Portal.html'" />
+</noscript>
 <script>
-        window.addEventListener('beforeunload', function (event) {
-            localStorage.setItem('visited', false);
-        });
+    window.addEventListener('beforeunload', function (event) {
+        localStorage.setItem('visited', false);
+    });
 
-        if (!localStorage.getItem('visited')) {
-            window.location.href = 'pages/educational_Portal.html';
-        }
+    if (!localStorage.getItem('visited')) {
+        window.location.href = 'pages/educational_Portal.html';
+    }
 
-        localStorage.setItem('visited', true);
-    </script>
+    localStorage.setItem('visited', true);
+</script>
 <div class="navigationBar">
 <a class="active" href="/index.html">Home</a>
 <a href="/pages/games.html">Games</a>
@@ -31,5 +34,6 @@
 <header>Home</header>
 <p>Made By: TooMuchOnMyMind</p>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
