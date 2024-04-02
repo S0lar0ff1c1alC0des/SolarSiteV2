@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GAMEZIFY V3</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="navigationBar">
-      <a class="active" href="/index.html">Home</a>
-      <a href="/pages/games.html">Games</a>
-    </div>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GAMEZIFY V3</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div class="navigationBar">
+<a class="active" href="/index.html">Home</a>
+<a href="/pages/games.html">Games</a>
+</div>
+<script>
+      if (!localStorage.getItem('visited')) {
+        window.location.href = '<your-redirect-url>';
+      }
 
-    <div class="splash-screen" id="splashScreen">
-      <p>Welcome To GAMEZIFY</p>
-    </div>
-
-    <div id="mainContent" style="display: none">
-      <header>Home</header>
-      <p>Made By: TooMuchOnMyMind</p>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+      localStorage.setItem('visited', true);
+    </script>
+<div class="splash-screen" id="splashScreen">
+<p>Welcome To GAMEZIFY</p>
+</div>
+<div id="mainContent" style="display: none">
+<header>Home</header>
+<p>Made By: TooMuchOnMyMind</p>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
