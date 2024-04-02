@@ -4,33 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
 
 
     <title>Vex 3</title>
 
-    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
 
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
 </head>
 
 <body>
-
     <div id="content"></div>
-    <div id="orientation"></div>
     <div id="loader">Loading...</div>
 
     <script type="text/javascript">
-        var gtag;
-
-
-
-        var gameName = "vex-3.js";
-
-
-
-
+        var gameName = 'vex-3.min.js';
 
 
         //This all here is for cache busting;
@@ -43,14 +31,14 @@
             document.body.appendChild(s);
         }
 
-
-        addScript('version.js', Date.now(), function() {
-
+        addScript('version.js', 1, function() {
             addScript(gameName, version, function() {
-                var game = new Vex3.Game();
-            });
-
-        });
+                /**
+                 * Here we create the game
+                 */
+                new Vex3.Game();
+            })
+        })
     </script>
 </body>
 

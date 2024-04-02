@@ -1,44 +1,22 @@
-# html5-space-invaders
-A HTML5 implementation of the classic Space Invaders game.
+SpaceInvaders
+=============
+This is a remake of the space invader phaser example, which you can find here:
+http://examples.phaser.io/
 
-This implementation supports one and two players.
+This remake is made with require.js, which breaks up the code into modules.
+Modules are in assets/javascript/module
 
-The game is playable in the URL: https://toivjon.github.io/html5-space-invaders/
+Code is more organized thanks to State and Statemanager class from Phaser.
+You can find the states in assets/javascript/state
 
-Development blog entry: https://toivjon.wordpress.com/2017/09/17/html5-space-invaders/
+I used Phaser 2.0.1(no Physics) from the Dev branch.
+The dev branch has a lot of bug fixes so it's recommended to use it.
 
-## Scenes
-Game is split into following scenes:
-1. A welcome scene, which contains the main menu and score descriptions.
-2. A "play player" scene, which tells which player should prepare to play.
-3. An in-game scene, which contains the actual gameplay.
+Thanks to require.js, i made an optimized version of my game,
+which can be viewed with indexOpt.html. This use the "compiled" code, which can be found in assets/javascript/built
 
-The list of scene transitions:
-* 1 to 2, when the number of players has been selected.
-* 2 to 3, after 150 ticks.
-* 3 to 2, after a level has been cleared i.e. all aliens has been destroyed.
-* 3 to 2, after player has been killed and other player has still lives left (multiplayer only).
-* 3 to 1, after pressing the enter key when game over text is being shown.
+Known issue: In every new play state(after the end state) the game makes new DOM nodes.
+The cause: in every cycle i make a new text to show the score.
+I tried to destroy the texts but i never succeed.
 
-## Features
-This Space Invaders implementation contains the following features:
-* A support for one or two player (turn-based) games.
-* Each player has three lives.
-* Each level lasts until avatar or all aliens are destroyed or if any of the aliens invades.
-* Game ends after each player has lost their lives.
-* Player game state is stored when toggling between players in the two player mode.
-* Aliens may shoot three different kind of missiles (rolling, plunger and squiggly).
-* Plunger and squiggly alien shots follow predefined shoot patterns.
-* Rolling shot is always launched from the players nearest alien.
-* Game field contains four pixelwise destructable shields.
-* Players earn points based on the destructed alien type.
-* Alien movement speed is increased after the number of shown aliens decreases.
-* Alien missile fire rate depends on the player score.
-* Alien starting y-position depends on the level number.
-* Flying saucer will be shown about periodically after each ~1200 ticks.
-* Points received from the flying saucer is based on a lookup-table and player shot count.
-
-## Screenshots
-![alt text](https://github.com/toivjon/html5-space-invaders/blob/master/Screenshots/welcome-scene.png "WelcomeScene")
-![alt text](https://github.com/toivjon/html5-space-invaders/blob/master/Screenshots/playplayer-scene.png "PlayerPlayerScene")
-![alt text](https://github.com/toivjon/html5-space-invaders/blob/master/Screenshots/ingame-scene.png "IngameScene")
+You can play with it here: http://strykerkkd.github.io/SpaceInvaders/

@@ -189,7 +189,7 @@
             "alignment": {
                 "type": "TOP_LEFT",
                 "offset": {
-                    "x": -16,
+                    "x": -6,
                     "y": 6.1
                 }
             }
@@ -235,7 +235,7 @@
             "alignment": {
                 "type": "TOP_RIGHT",
                 "offset": {
-                    "x": -10,
+                    "x": 0.5,
                     "y": 6.9
                 }
             }
@@ -248,7 +248,7 @@
             "text": "00:03:30",
             "align": "center",
             "position": {
-                "x": 4,
+                "x": 7.5,
                 "y": -5.4
             },
             "type": "text"
@@ -370,7 +370,7 @@
             "alignment": {
                 "type": "TOP_LEFT",
                 "offset": {
-                    "x": -15,
+                    "x": -6.3,
                     "y": 5.6
                 }
             }
@@ -383,7 +383,7 @@
             "text": "Challenge Room",
             "align": "center",
             "position": {
-                "x": -92,
+                "x": -101.9,
                 "y": -7.1
             },
             "anchor": {
@@ -400,7 +400,7 @@
             "text": "Total deaths: 0",
             "align": "center",
             "position": {
-                "x": -86.2,
+                "x": -96.2,
                 "y": 16.6
             },
             "anchor": {
@@ -724,7 +724,7 @@
                 "type": "BOTTOM_RIGHT",
                 "offset": {
                     "x": 3.4,
-                    "y": -342.8
+                    "y": -442.8
                 }
             }
         },

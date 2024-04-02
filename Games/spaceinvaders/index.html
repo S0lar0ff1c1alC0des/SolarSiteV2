@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="eng">
-<head>
-  <meta charset="utf-8">
-  <title>Space Invaders</title>
-  <link rel="stylesheet" href="styles.css">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script data-main="assets/javascript/main" src="assets/javascript/lib/require.js"></script>
 </head>
 <body>
-  <!-- We use canvas to draw stuff on the screen. -->
-  <canvas id="game-canvas" width="672" height="768">
-    Your browser does not support HTML5 canvas.
-  </canvas>
-  <script src="game.js"></script>
-  <script>
-    var spaceInvaders = new SpaceInvaders.Game();
-    spaceInvaders.start();
-  </script>
+    <div id="game">
+    </div>
 </body>
 </html>
