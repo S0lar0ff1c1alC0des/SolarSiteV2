@@ -25,6 +25,7 @@ body {
   width: fit-content;
   height: fit-content;
   transition-duration: 0.5s;
+  text-decoration: none;
 }
 
 .Game_Button img {
