@@ -147,3 +147,18 @@ header {
     opacity: 0;
   }
 }
+
+
+.Game_Button span {
+visibility: hidden;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.6);
+color: #fff;
+padding: 4px;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
+}
+
+.Game_Button:hover span {
+  visibility: visible;
+}

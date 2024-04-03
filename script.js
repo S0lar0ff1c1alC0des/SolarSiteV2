@@ -28,3 +28,6 @@ setTimeout(function () {
     document.getElementById("mainContent").style.display = "block";
   });
 }, splashDuration);
+
+
+
