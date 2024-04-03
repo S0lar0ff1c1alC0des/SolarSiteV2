@@ -163,7 +163,7 @@ header {
   transform: translateX(-50%);
   transition-duration: 0.4s;
   filter: none;
-  text-shadow: 0 0 1px #ffffff;
+  text-shadow: 0 0 2px #ffffff;
 }
 
 .Game_Button:hover span {
