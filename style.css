@@ -38,6 +38,9 @@ body {
 .Game_Button:hover {
   opacity: 0.2;
   transform: scale(1.1);
+}
+
+.Game_Button img:hover {
   filter: blur(2px);
 }
 
@@ -152,7 +155,10 @@ header {
 .Game_Button span {
   visibility: hidden;
   position: absolute;
-  color: #000000;
+  outline-color: rgb(0, 0, 0);
+  outline-width: 2px;
+  outline-style: solid;
+  color: white;
   padding: 4px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
