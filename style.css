@@ -36,11 +36,11 @@ body {
 }
 
 .Game_Button:hover {
-  opacity: 0.2;
   transform: scale(1.1);
 }
 
 .Game_Button img:hover {
+  opacity: 0.2;
   filter: blur(2px);
 }
 
