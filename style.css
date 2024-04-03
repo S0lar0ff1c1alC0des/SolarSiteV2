@@ -151,14 +151,10 @@ header {
   }
 }
 
-
 .Game_Button span {
   visibility: hidden;
   position: absolute;
-  outline-color: rgb(0, 0, 0);
-  outline-width: 2px;
-  outline-style: solid;
-  color: white;
+  color: #000000;
   padding: 4px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
@@ -167,6 +163,7 @@ header {
   transform: translateX(-50%);
   transition-duration: 0.4s;
   filter: none;
+  text-shadow: 0 0 1px #ffffff;
 }
 
 .Game_Button:hover span {
