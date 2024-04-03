@@ -159,7 +159,7 @@ header {
   color: #000000;
   padding: 4px;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
