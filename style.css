@@ -163,10 +163,23 @@ header {
   left: 50%;
   transform: translateX(-50%);
   filter: none;
-  text-shadow: 0 0 4px #ffffff;
+  text-shadow: 0 0 5px #ffffff;
   transition-duration: 0.4s;
 }
 
 .Game_Button:hover span {
+  animation: ComeIn 0.4s;
   visibility: visible;
+}
+
+
+
+@keyframes ComeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
