@@ -162,7 +162,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   filter: none;
-  text-shadow: 0 0 2px #ffffff;
+  text-shadow: 0 0 4px #ffffff;
   transition-duration: 0.4s;
 }
 
