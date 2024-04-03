@@ -14,3 +14,4 @@ Gamezify V3! A brand new site with better games!
 - https://gamezify-v3.vercel.app/
 - https://gamezify.netlify.app/
 - https://learnmathfast.netlify.app
+- https://toomuchonmymind.github.io/GAMEZIFY_V3
