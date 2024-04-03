@@ -33,6 +33,7 @@ body {
   height: 200px;
   border-radius: 10px;
   margin: 0 auto;
+  transition-duration: 0.4s;
 }
 
 .Game_Button:hover {
