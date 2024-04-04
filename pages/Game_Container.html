@@ -1,152 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Container</title>
     <style>
-      #gameFrame {
-        display: none;
-        width: 1500px;
-        height: 900px;
-        border: solid;
-        border-width: 10px;
-        border-radius: 10px;
-      }
+        #container {
+            position: relative;
+        }
+        
+        #gameFrame {
+            width: 900px;
+            height: 500px;
+            border: solid;
+            border-width: 10px;
+            border-radius: 10px;
+            background-color: #ccc; 
+            transition: all 0.5s ease; /* Added transition for smooth resizing */
+        }
 
-      #fullscreenButton,
-      #homeButton {
-        background-size: cover; /* Ensure the icon covers the button */
-        width: 35px;
-        height: 30px;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        display: none;
-      }
+        #playButton {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            z-index: 1000;
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
 
-      #homeButton {
-        background-image: url("/images/HomeButton_Image.jpeg"); /* Add your home icon path here */
-      }
+        #playButton:hover {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
 
-      #playButton {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        z-index: 1000;
-        padding: 20px 40px;
-        font-size: 24px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition-duration: 0.5s;
-      }
+        #toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-      #playButton:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-      }
+        #toolbar button {
+            width: 35px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin: 0 5px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
 
-      #toolbar {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #000; /* Solid black background */
-        display: none; /* Initially hide the toolbar */
-        z-index: 999; /* Ensure it's above other content */
-        padding: 10px;
-        box-sizing: border-box;
-      }
+        #homeButton {
+            background-image: url("/images/Home_Logo.png");
+            transition-duration: 0.5s;
+            background-color: transparent;
+            margin-right: 10px;
+        }
 
-      #toolbar button {
-        margin-right: 10px; /* Add space between buttons */
-        color: #fff; /* White color for the icons */
-      }
+        #homeButton:hover {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
 
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        height: 100vh;
-        background-color: #f0f0f0;
-      }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
+        }
+
+        #fullscreenButton {
+            background-image: url("/images/Fullscreen_Logo.png");
+            background-color: transparent;
+        }
+
+        .fullscreen {
+            position: fixed;
+            top: 10px;
+            right: 60px;
+            
+        }
+
+        .hide {
+          display: none;
+        }
     </style>
-  </head>
-  <body>
-    <div id="container">
-      <div id="homeButtonContainer">
-        <button id="homeButton" onclick="goHome()"></button>
-      </div>
-
-      <div id="startingScreen">
+</head>
+<body>
+<div id="container">
+    <div id="startingScreen">
         <button id="playButton" onclick="startGame()">Play</button>
-      </div>
-
-      <iframe id="gameFrame" src="" frameborder="0"></iframe>
-
-      <div id="toolbar">
-        <button
-          id="fullscreenButton"
-          onclick="toggleFullscreen()"
-          title="Fullscreen"
-        >
-          <img src="/images/Fullscreen_Image.png" alt="Fullscreen" />
-        </button>
-      </div>
     </div>
 
-    <script>
-      window.onload = function () {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const gameName = urlParams.get("game");
+    <iframe id="gameFrame" src="" frameborder="0"></iframe>
 
-        if (!gameName) {
-          console.error("No valid game selected.");
-        }
-      };
+    <div id="toolbar">
+        <button id="homeButton" onclick="goHome()" title="Home"></button>
+        <button id="fullscreenButton" onclick="toggleSize()" title="Toggle Size"></button>
+    </div>
+</div>
 
-      function startGame() {
+<script>
+    let isSmallSize = true;
+
+    function startGame() {
         const frame = document.getElementById("gameFrame");
         const playButton = document.getElementById("playButton");
-        const toolbar = document.getElementById("toolbar");
 
-        frame.style.display = "block";
         playButton.style.display = "none";
-        toolbar.style.display = "flex"; 
-        
+        frame.style.backgroundColor = "transparent"; 
+        frame.src = "/path/to/your/game"; // Change this to the path of your game
+        frame.contentWindow.postMessage('gameStarted', '*');
+    }
 
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const gameName = urlParams.get("game");
-
-        if (gameName) {
-          const gameSrc = `/Games/${gameName}`;
-          frame.src = gameSrc;
-          document.title = gameName;
-        }
-      }
-
-      function toggleFullscreen() {
+    function toggleSize() {
         const frame = document.getElementById("gameFrame");
+        const fullscreenButton = document.getElementById("fullscreenButton");
+        const homeButton = document.getElementById("homeButton");
 
-        if (!document.fullscreenElement) {
-          frame.requestFullscreen().catch((err) => {
-            console.log(
-              `Error attempting to enable full-screen mode: ${err.message} (${err.name})`
-            );
-          });
+        if (isSmallSize) {
+            frame.style.width = "100vw";
+            frame.style.height = "100vh";
+            fullscreenButton.classList.add('fullscreen');
+            homeButton.classList.add('hide');
+            isSmallSize = false;
         } else {
-          document.exitFullscreen();
+            frame.style.width = "900px";
+            frame.style.height = "500px";
+            fullscreenButton.classList.remove('fullscreen');
+            homeButton.classList.remove('hide');
+            isSmallSize = true;
         }
-      }
+    }
 
-      function goHome() {
+    function goHome() {
         window.location.href = "/index.html";
-      }
-    </script>
-  </body>
+    }
+
+    window.addEventListener('message', function(event) {
+        if (event.data === 'gameStarted') {
+            const playButton = document.getElementById("playButton");
+            playButton.style.display = "none"; 
+        }
+    });
+</script>
+</body>
 </html>
