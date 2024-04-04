@@ -4,96 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Container</title>
-    <link rel="stylesheet" href="/style.css" />
-<style>
-  #gameFrame {
-    display: none;
-    width: 1500px;
-    height: 900px;
-    border: 10px solid;
-    border-radius: 10px;
-    position: fixed;
-    top: 10px;
-    left: calc(50% - 750px);
-    z-index: 1000;
-    font-size: 24px;
-  }
+    <style>
+      #gameFrame {
+        display: none;
+        width: 500px;
+        height: 500px;
+        border: solid;
+        border-width: 10px;
+        border-radius: 10px;
+        align-items: center;
+      }
 
-  #fullscreenButton,
-  #homeButton {
-    background-size: cover;
-    width: 35px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    display: none;
-    margin: 10px;
-    background-color: black;
-  }
+      #fullscreenButton, #homeButton {
+        background-size: cover;
+        width: 35px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        display: none;
+        margin: 10px;
+      }
 
-  #homeButton {
-    background-image: url("/images/HomeButton_Image.jpeg");
-    transition-duration: 0.5s;
-  }
+      #homeButton {
+         background-image: url("/images/HomeButton_Image.jpeg");
+         display: none; 
+         transition-duration: 0.5s;
+        }
 
-  #homeButton:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-  }
+        #homeButton:hover {
+          opacity: 0.5;
+          transform: scale(1.1);
+        }
 
-  #playButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 20px 40px;
-    font-size: 24px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: fixed;
-    transition-duration: 0.5s;
-  }
 
-  #playButton:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-  }
+        #playButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000;
+          padding: 20px 40px;
+          font-size: 24px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition-duration: 0.5s;
+        }
 
-  #toolbar {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    background-color: #000;
-    padding: 10px;
-  }
 
-  #toolbar button {
-    margin-right: 10px;
-  }
 
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
+      #playButton:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+      }
 
-  #fullscreenImage {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-  }
-</style>
+      #toolbar {
+        position: absolute;
+        top: calc(50% + frameHeight);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        background-color: #000;
+        z-index: 999;
+        padding: 10px;
+        display: none;
+      }
 
+
+      #toolbar button {
+        margin-right: 10px; 
+        color: #fff; 
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      #fullscreenImage {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        background-color: black;
+      }
+
+      #homeButtonContainer {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        margin-left: 30px;
+
+        
+      }
 
     </style>
   </head>
@@ -115,7 +123,13 @@
         </div>
       </div>
     </div>
-
+    <p>Recomended</p>
+    <a href="game_container.html?game=astray">
+      <section class="Game_Button">
+        <img src="/images/Astray_Logo.jpg" alt="Astray"/>
+        <span>Astray</span>
+      </section>
+    </a>
 
     <script>
       window.onload = function () {
