@@ -172,8 +172,6 @@ header {
   visibility: visible;
 }
 
-
-
 @keyframes ComeIn {
   from {
     opacity: 0;
