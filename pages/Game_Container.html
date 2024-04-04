@@ -165,15 +165,13 @@
         const frame = document.getElementById("gameFrame");
 
         if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen();
-          document.getElementById("fullscreenButton").style.position = "fixed";
-          document.getElementById("fullscreenButton").style.top = "10px";
-          document.getElementById("fullscreenButton").style.right = "10px";
-          document.getElementById("fullscreenButton").style.transform = "none"; 
-          
-        }else {
+          frame.requestFullscreen().catch((err) => {
+            console.log(
+              `Error attempting to enable full-screen mode: ${err.message} (${err.name})`
+            );
+          });
+        } else {
           document.exitFullscreen();
-          
         }
       }
 
