@@ -23,11 +23,19 @@
         cursor: pointer;
         outline: none;
         display: none;
+        margin: 10px;
       }
 
       #homeButton {
          background-image: url("/images/HomeButton_Image.jpeg");
          display: none; 
+         background-color: black;
+         transition-duration: 0.5s;
+        }
+
+        #homeButton:hover {
+          opacity: 0.5;
+          transform: scale(1.1);
         }
 
 
@@ -84,6 +92,7 @@
         width: 25px;
         height: 25px;
         object-fit: cover;
+        background-color: black;
       }
 
       #homeButtonContainer {
