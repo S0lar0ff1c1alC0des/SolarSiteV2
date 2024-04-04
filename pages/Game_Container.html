@@ -22,10 +22,11 @@
         cursor: pointer;
         outline: none;
         display: none;
-      }
+      }swq
 
       #homeButton {
-         background-image: url("/images/HomeButton_Image.jpeg"); 
+         background-image: url("/images/HomeButton_Image.jpeg");
+         display: none; 
         }
 
 
@@ -34,7 +35,7 @@
         top: 50%;
         left: 50%;
         z-index: 1000;
-        padding: 20px 40px;
+        padding: 20px 20px;
         font-size: 24px;
         background-color: #007bff;
         color: #fff;
@@ -75,6 +76,13 @@
         height: 100vh;
         background-color: #f0f0f0;
       }
+
+      #fullscreenImage {
+         width: 25px;
+        height: 25px;
+        object-fit: cover;
+      }
+
     </style>
   </head>
   <body>
@@ -90,12 +98,8 @@
       <iframe id="gameFrame" src="" frameborder="0"></iframe>
 
       <div id="toolbar">
-        <button
-          id="fullscreenButton"
-          onclick="toggleFullscreen()"
-          title="Fullscreen"
-        >
-          <img src="/images/Fullscreen_Image.png" alt="Fullscreen" />
+        <button id="fullscreenButton" onclick="toggleFullscreen()" title="Fullscreen">
+          <img id="fullscreenImage" src="/images/Fullscreen_Image.png" alt="Fullscreen" />
         </button>
       </div>
     </div>
