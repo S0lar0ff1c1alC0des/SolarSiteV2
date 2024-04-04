@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Container</title>
+    <title>GAMEZIFY</title>
     <style>
         #container {
             position: relative;
         }
-        
+
         #gameFrame {
             width: 900px;
             height: 500px;
             border: solid;
             border-width: 10px;
             border-radius: 10px;
-            background-color: #ccc; 
-            transition: all 0.5s ease; /* Added transition for smooth resizing */
+            background-color: #ccc;
+            transition: all 0.5s ease;
         }
 
         #playButton {
@@ -83,17 +83,25 @@
         #fullscreenButton {
             background-image: url("/images/Fullscreen_Logo.png");
             background-color: transparent;
+            transition-duration: 0.5s;
+        }
+
+        #fullscreenButton.fullscreen {
+            background-color: black;
+            border-radius: 10px;
+            top: 0;
+            right: 60px;
+            padding: 20px;
         }
 
         .fullscreen {
             position: fixed;
             top: 10px;
             right: 60px;
-            
         }
 
         .hide {
-          display: none;
+            display: none;
         }
     </style>
 </head>
@@ -117,11 +125,23 @@
     function startGame() {
         const frame = document.getElementById("gameFrame");
         const playButton = document.getElementById("playButton");
+        const toolbar = document.getElementById("toolbar");
+        const fullscreenButton = document.getElementById("fullscreenButton");
+        fullscreenButton.style.display = "block";
 
+        frame.style.display = "block";
         playButton.style.display = "none";
-        frame.style.backgroundColor = "transparent"; 
-        frame.src = "/path/to/your/game"; // Change this to the path of your game
-        frame.contentWindow.postMessage('gameStarted', '*');
+        toolbar.style.display = "flex";
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const gameName = urlParams.get("game");
+
+        if (gameName) {
+            const gameSrc = `/Games/${gameName}`;
+            frame.src = gameSrc;
+            document.title = gameName;
+        }
     }
 
     function toggleSize() {
@@ -151,7 +171,7 @@
     window.addEventListener('message', function(event) {
         if (event.data === 'gameStarted') {
             const playButton = document.getElementById("playButton");
-            playButton.style.display = "none"; 
+            playButton.style.display = "none";
         }
     });
 </script>
