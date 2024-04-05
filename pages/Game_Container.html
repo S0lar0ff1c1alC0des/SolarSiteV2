@@ -6,6 +6,10 @@
   <title>GAMEZIFY</title>
   <link rel="stylesheet" href="/style.css" />
   <style>
+    .recommendations-container {
+      display: none; 
+    }
+
     #container {
       position: relative;
     }
@@ -193,11 +197,14 @@
     const toolbar = document.getElementById("toolbar");
     const fullscreenButton = document.getElementById("fullscreenButton");
     fullscreenButton.style.display = "block";
+    const recommendations = document.querySelector(".recommendations-container"); 
+
 
     frame.style.display = "block";
     playButton.style.display = "none";
     toolbar.style.display = "flex";
-
+    recommendations.style.display = "block";
+    
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const gameName = urlParams.get("game");
