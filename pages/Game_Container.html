@@ -141,7 +141,6 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const gameName = urlParams.get("game");
-        history.pushState(null, null, '/index.html');
         if (gameName) {
           document.getElementById("gameTitle").innerText = gameName;
         }
