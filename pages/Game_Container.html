@@ -141,6 +141,7 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const gameName = urlParams.get("game");
+        history.pushState(null, null, 'gamezify.netlify.app');
         if (gameName) {
           document.getElementById("gameTitle").innerText = gameName;
         }
