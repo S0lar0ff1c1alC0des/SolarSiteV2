@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .option {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="color"],
+      input[type="range"] {
+        width: 100%;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Settings</h1>
+      <div class="option">
+        <label for="background-color">Background Color:</label>
+        <input type="color" id="background-color" />
+      </div>
+      <div class="option">
+        <label for="text-color">Text Color:</label>
+        <input type="color" id="text-color" />
+      </div>
+      <div class="option">
+        <label for="font-size">Font Size:</label>
+        <input type="range" id="font-size" min="10" max="36" value="16" />
+      </div>
+ 
+      <button onclick="saveSettings()">Save</button>
+    </div>
+
+    <script>
+      function saveSettings() {
+        var backgroundColor = document.getElementById("background-color").value;
+        var textColor = document.getElementById("text-color").value;
+        var fontSize = document.getElementById("font-size").value;
+
+        // Save settings to localStorage
+        localStorage.setItem("background-color", backgroundColor);
+        localStorage.setItem("text-color", textColor);
+        localStorage.setItem("font-size", fontSize);
+
+        alert("Settings saved successfully!");
+
+        // Reload the page after settings are saved
+        location.reload();
+      }
+
+      // Load settings from localStorage on page load
+      window.onload = function () {
+        var backgroundColor = localStorage.getItem("background-color");
+        var textColor = localStorage.getItem("text-color");
+        var fontSize = localStorage.getItem("font-size");
+
+        if (backgroundColor)
+          document.body.style.backgroundColor = backgroundColor;
+        if (textColor) document.body.style.color = textColor;
+        if (fontSize) document.body.style.fontSize = fontSize + "px";
+      };
+    </script>
+  </body>
+</html>

@@ -29,5 +29,3 @@ setTimeout(function () {
   });
 }, splashDuration);
 
-
-
