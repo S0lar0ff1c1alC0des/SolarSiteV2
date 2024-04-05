@@ -19,6 +19,7 @@
       /* Container Styles */
       #container {
         position: relative;
+        margin-top: 100px;
       }
 
       /* Play Button Styles */
@@ -97,7 +98,6 @@
         right: 60px;
       }
 
-      /* Recommendations Container Styles */
       .recommendations-container {
         display: none;
         text-align: center;
@@ -112,7 +112,6 @@
 
       .recommended-game {
         position: relative;
-        display: inline-block;
         margin: 0 10px;
         text-align: center;
       }
@@ -150,7 +149,6 @@
       #gameFrame{
         width: 900px;
         height: 500px;
-        margin-top: 100px;
       }
     </style>
   </head>
@@ -192,9 +190,7 @@
         const playButton = document.getElementById("playButton");
         const toolbar = document.getElementById("toolbar");
         const fullscreenButton = document.getElementById("fullscreenButton");
-        const recommendations = document.querySelector(
-          ".recommendations-container"
-        );
+        const recommendations = document.querySelector(".recommendations-container");
 
         frame.style.display = "block";
         playButton.style.display = "none";
@@ -215,7 +211,7 @@
       function toggleSize() {
         const frame = document.getElementById("gameFrame");
         const fullscreenButton = document.getElementById("fullscreenButton");
-        const homeButton = document.getElementById("homeButton");
+        const homeButton = document.getElementById("homeButton")
 
         if (isSmallSize) {
           frame.style.position = "fixed";
@@ -226,6 +222,8 @@
           fullscreenButton.classList.add("fullscreen");
           homeButton.classList.add("hide");
           isSmallSize = false;
+          recommendations.style.display = 'inline-block';
+          
         } else {
           frame.style.position = "relative";
           frame.style.width = "900px"; 
@@ -233,6 +231,7 @@
           fullscreenButton.classList.remove("fullscreen");
           homeButton.classList.remove("hide");
           isSmallSize = true;
+          recommendations.style.display = 'none';
         }
       }
 
