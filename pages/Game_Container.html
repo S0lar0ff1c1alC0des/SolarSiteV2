@@ -6,7 +6,6 @@
     <title>GAMEZIFY</title>
     <link rel="stylesheet" href="/style.css" />
     <style>
-      
       body {
         display: flex;
         justify-content: center;
@@ -98,58 +97,9 @@
         right: 60px;
       }
 
-      .recommendations-container {
-        display: none;
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      .recommendations-heading {
-        font-size: 50px;
-        color: #fff;
-        margin-bottom: 30px;
-      }
-
-      .recommended-game {
-        position: relative;
-        margin: 0 10px;
-        text-align: center;
-      }
-
-      .recommended-game img {
-        width: 200px;
-        height: 200px;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        transition: transform 0.3s ease;
-      }
-
-      .recommended-game span {
-        color: #fff;
-        font-weight: bold;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 5px 10px;
-        border-radius: 5px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .recommended-game:hover img {
-        transform: scale(1.1);
-      }
-
-      .recommended-game:hover span {
-        opacity: 1;
-      }
-
-      #gameFrame{
+      #gameFrame {
         width: 900px;
         height: 500px;
-        align-items: center;
       }
     </style>
   </head>
@@ -171,16 +121,6 @@
           title="Toggle Size"
         ></button>
       </div>
-
-      <div class="recommendations-container">
-        <h2 class="recommendations-heading">Recommended Games</h2>
-        <div class="recommended-game">
-          <a href="game_container.html?game=2048">
-            <img src="/images/2048_logo.png" alt="2048" />
-            <span>2048</span>
-          </a>
-        </div>
-      </div>
     </div>
 
     <script>
@@ -191,12 +131,10 @@
         const playButton = document.getElementById("playButton");
         const toolbar = document.getElementById("toolbar");
         const fullscreenButton = document.getElementById("fullscreenButton");
-        const recommendations = document.querySelector(".recommendations-container");
 
         frame.style.display = "block";
         playButton.style.display = "none";
         toolbar.style.display = "flex";
-        recommendations.style.display = "block";
 
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -212,7 +150,7 @@
       function toggleSize() {
         const frame = document.getElementById("gameFrame");
         const fullscreenButton = document.getElementById("fullscreenButton");
-        const homeButton = document.getElementById("homeButton")
+        const homeButton = document.getElementById("homeButton");
 
         if (isSmallSize) {
           frame.style.position = "fixed";
@@ -223,16 +161,13 @@
           fullscreenButton.classList.add("fullscreen");
           homeButton.classList.add("hide");
           isSmallSize = false;
-          recommendations.style.display = 'inline-block';
-          
         } else {
           frame.style.position = "relative";
-          frame.style.width = "900px"; 
-          frame.style.height = "500px"; 
+          frame.style.width = "900px";
+          frame.style.height = "500px";
           fullscreenButton.classList.remove("fullscreen");
           homeButton.classList.remove("hide");
           isSmallSize = true;
-          recommendations.style.display = 'none';
         }
       }
 
