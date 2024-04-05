@@ -104,6 +104,7 @@
     </style>
   </head>
   <body>
+    <header id = "gameTitle"></header>
     <div id="container">
       <div id="startingScreen">
         <button id="playButton" onclick="startGame()">Play</button>
@@ -144,6 +145,7 @@
           const gameSrc = `/Games/${gameName}/index.html`;
           frame.src = gameSrc;
           document.title = gameName;
+          document.getElementById("gameTitle").innerText = gameName;
         }
       }
 
