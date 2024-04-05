@@ -20,6 +20,7 @@
       transition: all 0.5s ease;
       margin-top: 300px;
       margin-left: 23%;
+      display: none; /* Initially hide the game frame */
     }
 
     #playButton {
@@ -43,7 +44,7 @@
     }
 
     #toolbar {
-      display: flex;
+      display: none; /* Initially hide the toolbar */
       align-items: center;
       margin-top: 10px;
       padding: 10px;
@@ -174,59 +175,12 @@
   <div class="recommendations-container">
     <h2 class="recommendations-heading">Recommended Games</h2>
     <div class="recommended-game">
-      <a href="game_container.html?game=2048">
+      <a href="/game_container.html?game=2048">
         <img src="/images/2048_logo.png" alt="2048" />
         <span>2048</span>
       </a>
     </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=basketball-stars">
-        <img src="/images/basketball-stars_Logo.jpeg" alt="Basketball Stars" />
-        <span>Basketball Stars</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=1">
-        <img src="/images/1_Logo.png" alt="1" />
-        <span>1</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=1v1.lol">
-        <img src="/images/1v1.lol_logo.png" alt="1v1.lol" />
-        <span>1v1.lol</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=10minutestilldawn">
-        <img src="/Games/10minutestilldawn/splash.png" alt="10 Minutes Until Dawn" />
-        <span>10 Minutes Until Dawn</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=adarkroom">
-        <img src="/images/A-Dark-Room_Logo.jpeg" alt="A Dark Room" />
-        <span>A Dark Room</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=a-dance-of-fire-and-ice">
-        <img src="/images/A-Dance-of-Fire-and-ice_Logo.jpg" alt="A Dance Of Fire and Ice" />
-        <span>A Dance Of Fire and Ice</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=adrenalinechallenge">
-        <img src="/Games/adrenalinechallenge/adrenalinechallenge.jpg" alt="Adrenaline Challenge" />
-        <span>Adrenaline Challenge</span>
-      </a>
-    </div>
-    <div class="recommended-game">
-      <a href="game_container.html?game=adventuredrivers">
-        <img src="/Games/adventuredrivers/splash.png" alt="Adventure Drivers" />
-        <span>Adventure Drivers</span>
-      </a>
-    </div>
+    <!-- Add similar divs for other recommended games -->
   </div>
 </div>
 
@@ -249,7 +203,7 @@
     const gameName = urlParams.get("game");
 
     if (gameName) {
-      const gameSrc = `/Games/${gameName}`;
+      const gameSrc = `/Games/${gameName}/index.html`; // Adjusted game source path
       frame.src = gameSrc;
       document.title = gameName;
     }
@@ -283,6 +237,8 @@
     if (event.data === "gameStarted") {
       const playButton = document.getElementById("playButton");
       playButton.style.display = "none";
+      const fullscreenButton = document.getElementById("fullscreenButton");
+      fullscreenButton.style.display = "none"; // Hide fullscreen button after game starts
     }
   });
 </script>
