@@ -24,8 +24,9 @@
     /* Play Button Styles */
     #playButton {
       position: absolute;
-      top: 40%;
-      left: 40%;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 1000;
       padding: 20px 40px;
       font-size: 24px;
@@ -104,19 +105,16 @@
 
     #gameTitle {
       text-align: center;
-      margin-top: 20px;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: none; /* initially hide */
+      margin-top: 50px;
+      font-size: 36px;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <header id="gameTitle"></header>
   <div id="container">
+    <header id="gameTitle">GAME NAME</header>
     <div id="startingScreen">
-      <header id="gameTitle">GAME NAME</header>
       <button id="playButton" onclick="startGame()">Play</button>
     </div>
 
