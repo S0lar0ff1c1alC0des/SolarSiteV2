@@ -6,111 +6,116 @@
     <title>GAMEZIFY</title>
     <link rel="stylesheet" href="/style.css" />
     <style>
-          body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            height: 100vh;
-            background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
-          }
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          height: 100vh;
+          background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
+        }
 
 
-          #container {
-            position: relative;
-            margin-top: 100px;
-          }
-
-
-
-          #playButton {
-          position: absolute;
-          top: calc(50% + 50px); 
-          left: calc(50% - 100px); 
-          z-index: 1000;
-          padding: 20px 40px;
-          font-size: 24px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition-duration: 0.5s;
+        #container {
+          position: relative;
+          margin-top: 100px;
         }
 
 
 
-          #playButton:hover {
-            opacity: 0.5;
-            transform: scale(1.1);
-          }
-
-          #toolbar {
-            display: none;
-            align-items: center;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            margin-bottom: 100px;
-            width: 900px;
-          }
-
-          #toolbar button {
-            width: 35px;
-            height: 30px;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            margin: 0 5px;
-            background-repeat: no-repeat;
-            background-size: contain;
-          }
-
-          #homeButton {
-            background-image: url("/images/Home_Logo.png");
-            transition-duration: 0.5s;
-            background-color: transparent;
-            margin-right: 10px;
-          }
-
-          #homeButton:hover {
-            opacity: 0.5;
-            transform: scale(1.1);
-          }
+        #playButton {
+        position: absolute;
+        top: calc(50% + 50px);
+        left: calc(50% - 100px);
+        z-index: 1000;
+        padding: 20px 40px;
+        font-size: 24px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+      }
 
 
-          #fullscreenButton {
-            background-image: url("/images/Fullscreen_Logo.png");
-            background-color: transparent;
-            transition-duration: 0.5s;
-          }
 
-          #fullscreenButton.fullscreen {
-            background-color: black;
-            border-radius: 10px;
-            top: 0;
-            right: 60px;
-            padding: 20px;
-          }
+        #playButton:hover {
+          opacity: 0.5;
+          transform: scale(1.1);
+        }
 
-          .fullscreen {
-            position: fixed;
-            top: 10px;
-            right: 60px;
-          }
+        #toolbar {
+          display: none;
+          align-items: center;
+          margin-top: 10px;
+          padding: 10px;
+          background-color: rgba(0, 0, 0, 0.5);
+          margin-bottom: 100px;
+          width: 900px;
+        }
 
-          #gameFrame {
-            width: 900px;
-            height: 500px;
-            background-color: #0c0d13;
-          }
+        #toolbar button {
+          width: 35px;
+          height: 30px;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          margin: 0 5px;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
 
-          #gameTitle {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 36px;
-            color: #fff;
-          }
+        #homeButton {
+          background-image: url("/images/Home_Logo.png");
+          transition-duration: 0.5s;
+          background-color: transparent;
+          margin-right: 10px;
+        }
+
+        #homeButton:hover {
+          opacity: 0.5;
+          transform: scale(1.1);
+        }
+
+
+        #fullscreenButton {
+          background-image: url("/images/Fullscreen_Logo.png");
+          background-color: transparent;
+          transition-duration: 0.5s;
+        }
+        #fullscreenButton:hover {
+          opacity: 0.5;
+          transform: scale(1.1);
+
+        }
+
+        #fullscreenButton.fullscreen {
+          background-color: black;
+          border-radius: 10px;
+          top: 0;
+          right: 60px;
+          padding: 20px;
+        }
+
+        .fullscreen {
+          position: fixed;
+          top: 10px;
+          right: 60px;
+        }
+
+        #gameFrame {
+          width: 900px;
+          height: 500px;
+          background-color: #0c0d13;
+        }
+
+        #gameTitle {
+          text-align: center;
+          margin-top: 50px;
+          font-size: 36px;
+          color: #fff;
+        }
     </style>
   </head>
   <body>
@@ -137,7 +142,6 @@
     <script>
       let isSmallSize = true;
 
-
       window.onload = function () {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -156,7 +160,7 @@
         frame.style.display = "block";
         playButton.style.display = "none";
         toolbar.style.display = "flex";
-        gameTitle.style.display = "none"; 
+        gameTitle.style.display = "none";
 
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -166,7 +170,7 @@
           const gameSrc = `/Games/${gameName}/index.html`;
           frame.src = gameSrc;
           document.title = gameName;
-          gameTitle.innerText = gameName; 
+          gameTitle.innerText = gameName;
         }
       }
 
@@ -190,7 +194,7 @@
           frame.style.height = "500px";
           fullscreenButton.classList.remove("fullscreen");
           homeButton.classList.remove("hide");
-          isSmallSize = true; 
+          isSmallSize = true;
         }
       }
 
