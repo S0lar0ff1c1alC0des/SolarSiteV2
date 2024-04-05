@@ -113,7 +113,7 @@
 </head>
 <body>
   <div id="container">
-    <header id="gameTitle">GAME NAME</header>
+    <header id="gameTitle"></header>
     <div id="startingScreen">
       <button id="playButton" onclick="startGame()">Play</button>
     </div>
@@ -131,17 +131,26 @@
   <script>
     let isSmallSize = true;
 
+    // Set the game title when the page loads
+    window.onload = function() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const gameName = urlParams.get("game");
+      if (gameName) {
+        document.getElementById("gameTitle").innerText = gameName;
+      }
+    };
+
     function startGame() {
       const frame = document.getElementById("gameFrame");
       const playButton = document.getElementById("playButton");
       const toolbar = document.getElementById("toolbar");
-      const fullscreenButton = document.getElementById("fullscreenButton");
       const gameTitle = document.getElementById("gameTitle");
 
       frame.style.display = "block";
       playButton.style.display = "none";
       toolbar.style.display = "flex";
-      gameTitle.style.display = "none"; // hide the game title
+      gameTitle.style.display = "none"; // Hide the game title
 
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
@@ -151,7 +160,7 @@
         const gameSrc = `/Games/${gameName}/index.html`;
         frame.src = gameSrc;
         document.title = gameName;
-        gameTitle.innerText = gameName; // set the game title dynamically
+        gameTitle.innerText = gameName; // Set the game title dynamically
       }
     }
 
