@@ -1,14 +1,14 @@
 body {
-    background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
-}
-
-
-#container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     height: 100vh;
+    background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
+}
+
+
+#container {
     position: relative;
     margin-top: 100px;
 }
@@ -110,4 +110,10 @@ body {
     margin-top: 80px;
     font-size: 36px;
     color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    display: block;
 }
