@@ -61,7 +61,7 @@
 ## Places to find me:
 
 - [Gitlab](https://gitlab.com/gamezify/GAMEZIFY_V3)
-- [Codeberg](https://codeberg.org/TooMuchOnMyMind/GAMEZIFY_V3#places-to-find-me-1))
+- [Codeberg](https://codeberg.org/TooMuchOnMyMind/GAMEZIFY_V31)
 - Replit (Coming Soon)
 
 
