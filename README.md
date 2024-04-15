@@ -60,3 +60,9 @@ Welcome to Gamezify V3! Explore our brand new site with better games!
 2. Thank you 3hko & Opium for the games.
 3. Again, thank you 3hko for the inspiration.
 
+
+## Places to find me:
+-[GitLab(ab.com/gamezify/GAMEZIFY_V3)]
+-Codeberg(Coming Soon)
+-Replit (Coming Soon)
+
