@@ -59,4 +59,4 @@ Welcome to Gamezify V3! Explore our brand new site with better games!
 1. Thank you to J.C for helping with the original Gamezify.
 2. Thank you 3hko & Opium for the games.
 3. Again, thank you 3hko for the inspiration.
-```
+
