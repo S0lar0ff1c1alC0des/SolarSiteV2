@@ -1,4 +1,3 @@
-```markdown
 # GAMEZIFY_V3
 
 Welcome to Gamezify V3! Explore our brand new site with better games!
