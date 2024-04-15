@@ -4,17 +4,17 @@ Welcome to Gamezify V3! Explore our brand new site with better games!
 
 ## Links
 
-- [Gamezify V3](https://gamezify-v3.vercel.app/)
-- [Learn Calculus Quick](https://learn-calculus-quick-8lgwlsia2-toomuchonmyminds-projects.vercel.app/)
-- [Learn Calculus Quick](https://learn-calculus-quick-8lgwlsia2-toomuchonmyminds-projects.vercel.app/)
-- [Learn Calculus Quick](https://learn-calculus-quick-git-main-toomuchonmyminds-projects.vercel.app/)
-- [Learn Calculus Quick](https://learn-calculus-quick.vercel.app/)
-- [Gamezify V3](https://gamezify-v3-cbta20tgv-toomuchonmyminds-projects.vercel.app/)
-- [Gamezify V3](https://gamezify-v3-git-main-toomuchonmyminds-projects.vercel.app/)
-- [Gamezify V3](https://gamezify-v3.vercel.app/)
-- [Gamezify](https://gamezify.netlify.app/)
-- [Learn Math Fast](https://learnmathfast.netlify.app)
-- [Gamezify V3](https://toomuchonmymind.github.io/GAMEZIFY_V3)
+- https://gamezify-v3.vercel.app/
+- https://learn-calculus-quick-8lgwlsia2-toomuchonmyminds-projects.vercel.app/
+- https://learn-calculus-quick-8lgwlsia2-toomuchonmyminds-projects.vercel.app/
+- https://learn-calculus-quick-git-main-toomuchonmyminds-projects.vercel.app/
+- https://learn-calculus-quick.vercel.app/
+- https://gamezify-v3-cbta20tgv-toomuchonmyminds-projects.vercel.app/
+- https://gamezify-v3-git-main-toomuchonmyminds-projects.vercel.app/
+- https://gamezify-v3.vercel.app/
+- https://gamezify.netlify.app/
+- https://learnmathfast.netlify.app
+- https://toomuchonmymind.github.io/GAMEZIFY_V3
 
 ## Deployment
 
