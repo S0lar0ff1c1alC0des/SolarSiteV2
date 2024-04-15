@@ -28,6 +28,27 @@ Gamezify V3! A brand new site with better games!
 8. Click deploy
 9. You have a new gamezify link!
 
+# If you want to add games:
+1. Find a game file of your choosing
+2. In your forked repo, find the games folder
+3. Add the game to the folder
+4. Copy this code:
+   <div class="container" id="gameContainer">
+      <a href="/pages/Game_Container/Game_Container.html?game=Nameofyourgame">
+        <section class="Game_Button">
+          <img
+            src="imageforyourgame"
+            alt="Game Name"
+          />
+          <span>Game Name</span>
+        </section>
+      </a>
+
+5. Replace "Game name" with the name of your game
+6. Find an image for your game and add it to the images folder
+7. Copy the relative file path for the image
+8. Replace "imageforyourgame" with the path
+9. Add a slash in front of the image path
 
 # Credits
 
