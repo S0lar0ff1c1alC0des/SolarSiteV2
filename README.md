@@ -128,7 +128,7 @@ Welcome to Gamezify V3! Explore our brand new site with better games!
 ## Places to find me:
 
 - [Gitlab](https://gitlab.com/gamezify/GAMEZIFY_V3)
-- Codeberg (Coming Soon)
+- [Codeberg](https://codeberg.org/TooMuchOnMyMind/GAMEZIFY_V3#places-to-find-me-1))
 - Replit (Coming Soon)
 
 
