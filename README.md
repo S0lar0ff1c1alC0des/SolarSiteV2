@@ -1,5 +1,6 @@
 # GAMEZIFY_V3
 
+### Look in "Wiki" for more in-depth
 
 ## Links
 - https://gamezify-v3.vercel.app/
