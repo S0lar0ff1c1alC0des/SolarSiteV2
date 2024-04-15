@@ -1,6 +1,5 @@
 # GAMEZIFY_V3
 
-### Look in "Wiki" for more in-depth
 
 ## Links
 - https://gamezify-v3.vercel.app/
@@ -14,6 +13,9 @@
 - https://gamezify.netlify.app/
 - https://learnmathfast.netlify.app
 - https://toomuchonmymind.github.io/GAMEZIFY_V3 (DOES NOT WORK) 
+
+
+### Look in "Wiki" for more in-depth
 
 ## Deployment
 
@@ -52,6 +54,11 @@
 7. Copy the relative file path for the image.
 8. Replace "imageforyourgame" with the path.
 9. Add a slash in front of the image path.
+
+
+
+
+
 
 ## Credits
 
