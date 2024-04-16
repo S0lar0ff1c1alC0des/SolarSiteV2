@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column; /* Ensure elements stack vertically */
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -7,20 +8,12 @@ body {
     background: radial-gradient(#0d1d31 0%, #0c0d13 100%);
 }
 
-
 #container {
-    position: relative;
-    margin-top: 100px;
-    display: block;
+    margin-top: 100px; /* Adjust margin-top as needed */
+    text-align: center; /* Center the content inside #container */
 }
 
-
-
 #playButton {
-    position: absolute;
-    top: calc(50% + 25px);
-    left: calc(50% - 100px);
-    z-index: 1000;
     padding: 20px 40px;
     font-size: 24px;
     background-color: #007bff;
@@ -31,21 +24,17 @@ body {
     transition-duration: 0.5s;
 }
 
-
-
 #playButton:hover {
     opacity: 0.5;
     transform: scale(1.1);
 }
 
 #toolbar {
-    display: none;
+    display: none; /* Hide toolbar by default */
     align-items: center;
-    margin-top: 10px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 100px;
-    width: 900px;
+    margin-top: 10px; /* Adjust margin-top as needed */
     border-radius: 10px;
 }
 
@@ -72,7 +61,6 @@ body {
     transform: scale(1.1);
 }
 
-
 #fullscreenButton {
     background-image: url("/images/Fullscreen_Logo.png");
     background-color: transparent;
@@ -82,14 +70,11 @@ body {
 #fullscreenButton:hover {
     opacity: 0.5;
     transform: scale(1.1);
-
 }
 
 #fullscreenButton.fullscreen {
     background-color: black;
     border-radius: 10px;
-    top: 0;
-    right: 60px;
     padding: 20px;
 }
 
@@ -102,8 +87,9 @@ body {
 #gameFrame {
     width: 900px;
     height: 500px;
+    display: block; 
+    margin: 20px auto; 
     background-color: transparent;
-    align-items: center;
 }
 
 #gameTitle {
@@ -112,6 +98,7 @@ body {
     font-size: 36px;
     color: #fff;
 }
+
 
 h1 {
     text-align: center;
