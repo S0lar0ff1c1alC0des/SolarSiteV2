@@ -1,6 +1,6 @@
 body {
     display: flex;
-    flex-direction: column; /* Ensure elements stack vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -9,8 +9,8 @@ body {
 }
 
 #container {
-    margin-top: 100px; /* Adjust margin-top as needed */
-    text-align: center; /* Center the content inside #container */
+    margin-top: 100px; 
+    text-align: center; 
 }
 
 #playButton {
@@ -82,6 +82,7 @@ body {
     position: fixed;
     top: 10px;
     right: 60px;
+    margin: 0;
 }
 
 #gameFrame {
@@ -101,5 +102,5 @@ body {
 
 #footer {
     margin-top: 20px; /* Adjust margin-top as needed */
-    text-align: center; /* Center the content within the footer */
+    text-align: center; 
 }
