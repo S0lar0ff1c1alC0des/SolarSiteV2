@@ -1,6 +1,6 @@
 # GAMEZIFY_V3
 
-![Gamezify Logo](https://gamezify.netlify.app/images/MAINLOGO.png)
+!(https://gamezify.netlify.app/images/MAINLOGO.png)
 
 
 ## Links
