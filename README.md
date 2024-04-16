@@ -1,5 +1,6 @@
 # GAMEZIFY_V3
 
+![GamezifyLogot](/images/MAINLOGO.png)
 
 ## Links
 - https://gamezify-v3.vercel.app/
