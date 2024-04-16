@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAMEZIFY</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="gamecontainer.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="gamecontainer.css">
+</head>
+<body>
     <div id="container">
-      <header id="gameTitle"></header>
-      <div id="startingScreen">
-        <button id="playButton" onclick="startGame()">Play</button>
-      </div>
-
-      <div id="gameFrameContainer">
-        <iframe id="gameFrame" src="" frameborder="0"></iframe>
-      </div>
-
-      <div id="toolbar">
-        <button id="homeButton" onclick="goHome()" title="Home"></button>
-        <button
-          id="fullscreenButton"
-          onclick="toggleSize()"
-          title="Toggle Size"
-        ></button>
-      </div>
+        <header id="gameTitle"></header>
+        <div id="startingScreen">
+            <button id="playButton" onclick="startGame()">Play</button>
+        </div>
+        <div id="gameFrameContainer">
+            <iframe id="gameFrame" src="" frameborder="0"></iframe>
+        </div>
+        <div id="toolbar">
+            <button id="homeButton" onclick="goHome()" title="Home"></button>
+            <button id="fullscreenButton" onclick="toggleSize()" title="Toggle Size"></button>
+        </div>
     </div>
-    <div
-      style="margin-top: 500px; padding: 10px; background-color: black; width: 100%; text-align: center;"
-    >
-      <p>Page View Counter!</p>
-      <a href="https://www.hitwebcounter.com" target="_blank">
-        <img
-          src="https://hitwebcounter.com/counter/counter.php?page=12709193&style=0001&nbdigits=5&type=page&initCount=0"
-          title="Counter Widget"
-          alt="Visit counter For Websites"
-          border="0"
-      /></a>
-      <p>Copyright Gamezify 2023</p>
-      <p>Thank you for viewing our site!</p>
+    <div style="margin-top: 20px;"> <!-- Adjust margin-top as needed -->
+        <p>Page View Counter!</p>
+        <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=12709193&style=0001&nbdigits=5&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0">
+        </a>
+        <p>Copyright Gamezify 2023</p>
+        <p>Thank you for viewing our site!</p>
     </div>
     <script src="gamecontainer.js"></script>
-  </body>
+</body>
 </html>
