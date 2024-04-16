@@ -3,7 +3,6 @@ canvas.width = 320;
 canvas.height = 320;
 const ctx = canvas.getContext("2d");
 
-// inspired by gl-matrix beta 4
 class Vec2 extends Array {
   
   constructor (...values) {
