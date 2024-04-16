@@ -1,5 +1,5 @@
 body {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -11,6 +11,7 @@ body {
 #container {
     position: relative;
     margin-top: 100px;
+    display: block;
 }
 
 
