@@ -1,6 +1,7 @@
 # GAMEZIFY_V3
 
-![GamezifyLogot](/images/MAINLOGO.png)
+![Gamezify Logo](https://gamezify.netlify.app/images/MAINLOGO.png)
+
 
 ## Links
 - https://gamezify-v3.vercel.app/
