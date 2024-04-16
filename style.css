@@ -1,6 +1,8 @@
 body {
   background-image: url("/images/background.gif");
   font-family: "Space Mono", monospace;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
