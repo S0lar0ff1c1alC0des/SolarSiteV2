@@ -99,9 +99,7 @@ body {
     color: #fff;
 }
 
-
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    display: block;
+#footer {
+    margin-top: 20px; /* Adjust margin-top as needed */
+    text-align: center; /* Center the content within the footer */
 }
