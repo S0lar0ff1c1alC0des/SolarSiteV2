@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GAMEZIFY</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="gamecontainer.css" />
-  </head>
-  <body>
-    <div id="container">
-      <header id="gameTitle"></header>
-      <div id="startingScreen">
-        <button id="playButton" onclick="startGame()">Play</button>
-      </div>
-      <div id="gameFrameContainer">
-        <iframe id="gameFrame" src="" frameborder="0"></iframe>
-      </div>
-      <div id="toolbar">
-        <button id="homeButton" onclick="goHome()" title="Home"></button>
-        <button
-          id="fullscreenButton"
-          onclick="toggleSize()"
-          title="Toggle Size"
-        ></button>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMEZIFY</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="gamecontainer.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header id="gameTitle"></header>
+    <div id="startingScreen">
+      <button id="playButton" onclick="startGame()">Play</button>
     </div>
+    <div id="gameFrameContainer">
+      <iframe id="gameFrame" src="" frameborder="0"></iframe>
+    </div>
+    <div id="toolbar">
+      <button id="homeButton" onclick="goHome()" title="Home"></button>
+      <button id="fullscreenButton" onclick="toggleSize()" title="Toggle Size"></button>
+    </div>
+  </div>
+  
+  <div>
     <h1>Reccomended Games</h1>
     <div class="container" id="gameContainer">
-      <a
-        href="/pages/Game_Container/Game_Container.html?game=super-smash-flash-2b"
-      >
+      <a href="/pages/Game_Container/Game_Container.html?game=super-smash-flash-2b">
         <section class="Game_Button">
-          <img
-            src="/images/Super-Smash-Flash-2_Logo.jpeg"
-            alt="Super-Smash-Flash"
-          />
+          <img src="/images/Super-Smash-Flash-2_Logo.jpeg" alt="Super-Smash-Flash" />
           <span>Super Smash Flash</span>
         </section>
       </a>
@@ -70,27 +65,22 @@
       </a>
       <a href="/pages/Game_Container/Game_Container.html?game=basketball-stars">
         <section class="Game_Button">
-          <img
-            src="/images/basketball-stars_Logo.jpeg"
-            alt="Basketball Stars"
-          />
+          <img src="/images/basketball-stars_Logo.jpeg" alt="Basketball Stars" />
           <span>Basketball Stars</span>
         </section>
       </a>
     </div>
-    <div id="footer">
-      <p>Page View Counter!</p>
-      <a href="https://www.hitwebcounter.com" target="_blank">
-        <img
-          src="https://hitwebcounter.com/counter/counter.php?page=12709193&style=0001&nbdigits=5&type=page&initCount=0"
-          title="Counter Widget"
-          alt="Visit counter For Websites"
-          border="0"
-        />
-      </a>
-      <p>Copyright Gamezify 2023</p>
-      <p>Thank you for viewing our site!</p>
-    </div>
-    <script src="gamecontainer.js"></script>
-  </body>
+  </div>
+  <div id="footer">
+    <p>Page View Counter!</p>
+    <a href="https://www.hitwebcounter.com" target="_blank">
+      <img src="https://hitwebcounter.com/counter/counter.php?page=12709193&style=0001&nbdigits=5&type=page&initCount=0"
+        title="Counter Widget" alt="Visit counter For Websites" border="0" />
+    </a>
+    <p>Copyright Gamezify 2023</p>
+    <p>Thank you for viewing our site!</p>
+  </div>
+  <script src="gamecontainer.js"></script>
+</body>
+
 </html>
