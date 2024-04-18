@@ -30,11 +30,11 @@ body {
 }
 
 #toolbar {
-    display: none; /* Hide toolbar by default */
+    display: none; 
     align-items: center;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 10px; /* Adjust margin-top as needed */
+    margin-top: 0;
     border-radius: 10px;
 }
 
@@ -76,7 +76,6 @@ body {
     background-color: black;
     border-radius: 10px;
     padding: 20px;
-    background-image: url("/images/exit-full-screen.png");
 }
 
 .fullscreen {
