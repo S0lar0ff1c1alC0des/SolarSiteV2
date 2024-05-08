@@ -30,8 +30,8 @@ body {
 
 .Game_Button img {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   border-radius: 10px;
   margin: 0 auto;
   transition-duration: 0.4s;
@@ -39,7 +39,7 @@ body {
 
 .Game_Button:hover {
   transform: scale(1.1);
-  border-color:magenta;
+
 }
 
 .Game_Button img:hover {
